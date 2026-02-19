@@ -1,6 +1,19 @@
-# CLAUDE.md
+# myStuff
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+myStuff is the enterprise workspace root zgent (in-process toward Zgent certification). It's the top-level organizer — every sibling repo lives under `c:\myStuff\` (Windows) / `/root/projects/` (WSL).
+
+## Zgent Context
+
+- **Enterprise role**: Workspace root, cross-project registry, infrastructure configs
+- **Graduation status**: In-process. Standard artifacts deployed (beads-first, zgent-permissions)
+- **Unique path**: As workspace root, graduation is less about a query API and more about becoming the authoritative registry of enterprise structure
+
+### Conventions
+
+- Beads-first: self-bead for non-trivial work, reference bead ID in commits
+- Enterprise permissions: read sibling repos, write only own path
+
+---
 
 ## Project Overview
 
@@ -131,7 +144,7 @@ git status
 ### Python Projects
 Most Python projects use modern tooling:
 - **myDSPy**: Uses `uv` for dependency management
-- **Bitwarden**: Uses traditional `pip` and `requirements.txt`
+- **Bitwarden**: Uses `pyproject.toml` with `pip install -e ".[dev]"`
 
 ### Documentation Style
 - Linter-compliant markdown (enforced in myDSPy)
